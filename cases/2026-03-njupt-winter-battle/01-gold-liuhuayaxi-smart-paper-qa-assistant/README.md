@@ -12,6 +12,8 @@ Literature QA and Comparative Analysis System Based on Prompt Engineering and Lo
 - **Team Members:** Shi Suni, Yan Ran
 - **Awarded:** First Prize
 
+The `01-gold-` prefix in the case folder name was added by the organizers after the competition results were announced.
+
 ## Environment
 
 - **Base Image:** Basic GPU Environment (aup-learning-cloud)
