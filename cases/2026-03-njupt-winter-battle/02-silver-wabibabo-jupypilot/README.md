@@ -51,7 +51,16 @@ This submission can demonstrate the following end-to-end workflow:
 - Notebook-based initialization and interactive UI startup;
 - Repository-grounded code QA, patch generation, and verification flow;
 - Prompt-engineering and tool-orchestration design in practical implementation.
-
+- ![demo](./png/1.png)
+- ![demo1](gif/1.gif)
+- ![demo](./png/2.png)
+- ![demo1](gif/2.gif)
+- ![demo](./png/3.png)
+- ![demo1](gif/3.gif)
+- ![demo](./png/4.png)
+- ![demo1](gif/4.gif)
+- ![demo](./png/5.png)
+- ![demo1](gif/5.gif)
 ## References
 
 - Jupyter Notebook
