@@ -45,7 +45,41 @@ cases/
 - **`README.md`** — 英文版本。使用 `template/README.md` 中的模板，**所有标注 `<!-- required -->` 的字段必须填写**，请用**英文**填写。
 - **`README_ZH.md`** — 中文版本。使用 `template/README_ZH.md` 中的模板，**所有标注 `<!-- 必填 -->` 的字段必须填写**，请用**中文**填写。
 
-### 4. 填写依赖列表
+### 4. 添加截图、动图和演示视频（推荐）
+
+视觉内容能让你的作品脱颖而出。建议在 `README.md` 和 `README_ZH.md` 中都加入。
+
+**建议包含的内容：**
+
+| 类型 | 推荐内容 |
+|------|---------|
+| 截图 | 界面截图、推理结果、图表 |
+| GIF 动图 | 10–30 秒的功能演示 |
+| 视频 | 外链（B站、YouTube），在 README 中附链接 |
+
+**在 README 中引用媒体文件：**
+
+```markdown
+![demo](./assets/demo.gif)
+![result](./assets/result.png)
+```
+
+所有媒体文件请放在项目目录下的 `assets/` 文件夹中。
+
+**视频转 GIF 方法：**
+
+若演示视频体积较大，建议截取关键片段转为 GIF：
+
+```bash
+# ffmpeg：从第 5 秒开始截取 20 秒，宽度缩放至 720px，15 帧/秒
+ffmpeg -ss 00:00:05 -t 20 -i demo.mp4 \
+  -vf "fps=15,scale=720:-1:flags=lanczos" \
+  -loop 0 assets/demo.gif
+```
+
+> 单个 GIF 请控制在 **10 MB 以内**，`assets/` 文件夹总大小不超过 **50 MB**。
+
+### 5. 填写依赖列表
 
 编辑 `requirements.txt`，列出你的 notebook 需要的额外 pip 包。
 
@@ -53,7 +87,7 @@ cases/
 
 若无额外依赖，保留空文件即可（文件必须存在）。
 
-### 5. 在 aup-learning-cloud 中测试
+### 6. 在 aup-learning-cloud 中测试
 
 提交前请完成以下验证（**两个 notebook 都要测试**）：
 
@@ -61,7 +95,7 @@ cases/
 2. 从头到尾运行 `main.ipynb`（英文版）的所有 Cell，确认无报错
 3. 从头到尾运行 `main_zh.ipynb`（中文版）的所有 Cell，确认无报错
 
-### 6. 提交 Pull Request
+### 7. 提交 Pull Request
 
 1. 将修改 commit 并 push 到你的 fork
 2. 向本仓库发起 Pull Request

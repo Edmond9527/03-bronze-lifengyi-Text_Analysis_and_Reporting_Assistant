@@ -45,7 +45,41 @@ Both documentation files are required:
 - **`README.md`** — English version. Use the template in `template/README.md`. All fields marked `<!-- required -->` must be completed. Write in **English**.
 - **`README_ZH.md`** — Chinese version. Use the template in `template/README_ZH.md`. All fields marked `<!-- 必填 -->` must be completed. Write in **Chinese**.
 
-### 4. List your dependencies
+### 4. Add screenshots, GIFs, and demos (recommended)
+
+Visuals make your project stand out. Include them in your `README.md` and `README_ZH.md`.
+
+**What to include:**
+
+| Type | Recommended content |
+|------|-------------------|
+| Screenshots | UI screenshots, inference results, charts |
+| GIF | Short demo of the workflow (10–30 s) |
+| Video | Link to an external video (Bilibili, YouTube) |
+
+**How to include media in your README:**
+
+```markdown
+![demo](./assets/demo.gif)
+![result](./assets/result.png)
+```
+
+Put all media files in an `assets/` folder inside your project directory.
+
+**Video → GIF conversion tip:**
+
+If your demo video is large, extract the key part and convert it to GIF:
+
+```bash
+# ffmpeg: trim from 0:05, duration 20 s, scale to 720px wide, 15 fps
+ffmpeg -ss 00:00:05 -t 20 -i demo.mp4 \
+  -vf "fps=15,scale=720:-1:flags=lanczos" \
+  -loop 0 assets/demo.gif
+```
+
+> Keep each GIF under **10 MB** and the total `assets/` folder under **50 MB**.
+
+### 5. List your dependencies
 
 Edit `requirements.txt` with any pip packages your notebook needs.
 
@@ -53,7 +87,7 @@ Edit `requirements.txt` with any pip packages your notebook needs.
 
 Leave the file empty (but present) if you have no extra dependencies.
 
-### 5. Test in aup-learning-cloud
+### 6. Test in aup-learning-cloud
 
 Before submitting, verify **both** notebooks run end-to-end:
 
@@ -61,7 +95,7 @@ Before submitting, verify **both** notebooks run end-to-end:
 2. Run all cells in `main.ipynb` (English) from top to bottom — confirm no errors
 3. Run all cells in `main_zh.ipynb` (Chinese) from top to bottom — confirm no errors
 
-### 6. Submit a Pull Request
+### 7. Submit a Pull Request
 
 1. Commit and push your changes to your fork
 2. Open a Pull Request to this repository
