@@ -5,3 +5,4 @@
 # transformers==4.40.0
 # datasets
 # accelerate
+PyPDF2
