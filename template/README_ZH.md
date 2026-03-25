@@ -24,7 +24,7 @@
 1. 在 aup-learning-cloud 中选择 **Basic GPU Environment**，Git URL 填写本仓库地址
 2. 进入 `cases/2026-03-njupt-winter-camp/03-bronze-lifengyi-ITARAssiant`
 3. 打开 `main_zh.ipynb`（中文版）或 `main.ipynb`（英文版）
-4. 从头到尾运行所有 Cell
+4. 从头到尾运行所有 Cell, 依赖包安装已在第一个Cell中。
 
 ## 技术亮点
 
